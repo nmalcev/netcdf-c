@@ -1,0 +1,5 @@
+/home/user/Documents/prj/netcdf_reader/data/GlobColour/L3b_20181001__GLOB_4_AV-MOD_NRRS555_DAY_00.nc
+/home/user/Documents/prj/netcdf_reader/data/GlobColour/L3b_20181001__GLOB_4_AV-MOD_NRRS490_DAY_00.nc
+/home/user/Documents/prj/netcdf_reader/data/GlobColour/L3b_20181001__GLOB_4_AV-MOD_NRRS531_DAY_00.nc
+/home/user/Documents/prj/netcdf_reader/data/GlobColour/L3b_20181001__GLOB_4_AV-MOD_NRRS443_DAY_00.nc
+/home/user/Documents/prj/netcdf_reader/data/GlobColour/L3b_20181001__GLOB_4_AV-MOD_NRRS412_DAY_00.nc
