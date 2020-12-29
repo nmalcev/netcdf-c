@@ -12,4 +12,3 @@ PROG_NAME="main"
 cd src
 gcc import_ex.c ./utils.c ./netcdf_utils.c -o $PROG_NAME -Wall $FLAG -lm -lnetcdf -O3
 ./$PROG_NAME ./liste_fic.txt
-
