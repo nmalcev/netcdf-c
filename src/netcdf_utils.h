@@ -22,3 +22,4 @@ const char* getAttribute_str(int ncid, char attr_name[]);
 void* getAttributeValue(int ncid, char attr_name[], nc_type* type, size_t* size);
 char* value2str(void* value, nc_type type);
 struct dimItem* getDimensions(int ncid, int* num_dim);
+int get_var_attribute(int ncid, char* var_name, char* attr_name, struct varAttr* attr_value);

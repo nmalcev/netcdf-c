@@ -162,13 +162,14 @@ const char* getAttribute_str(int ncid, char attr_name[])
         return NULL;
     }
 
-    char *buf = malloc(lenp+1); // aka char buf[lenp + 1];
+    char *buf = malloc(lenp + 1);
     if (!buf) {
         return NULL;
     }
     if ((retval = nc_get_att_text(ncid, NC_GLOBAL, attr_name, buf))){
         return NULL;
     }
+    buf[lenp] = '\0';
     return buf;
 }
 
@@ -279,3 +280,17 @@ struct dimItem* getDimensions(int ncid, int* num_dim)
     return items;
 }
 
+int get_var_attribute(int ncid, char* var_name, char* attr_name, struct varAttr* attr_value) {
+  int attr_num; // number of attributes
+  // The getVarAttributes() function collects all attributes into a single data structure:
+  struct varAttr* attributes = getVarAttributes(ncid, var_name, &attr_num);
+  
+  int i;
+  for(i=0; i < attr_num; i++) {
+    if (strcmp(attributes[i].name, attr_name) == 0 ) {
+      *attr_value = attributes[i];
+      return 0;
+    }
+  }
+  return -1;
+}
